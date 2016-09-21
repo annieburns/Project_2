@@ -7,13 +7,13 @@ When your relatives or a friend comes to town, the first thing they ask is where
 
 So next time when someone asks... "what should I do, where do you recommend?" You simple send them your Plot so they can see:
 
-*Restaurants
-*Bars
-*Galleries
-*Museums
-*Events
-*Stores
-*Hidden Gems (Other)
+*   Restaurants
+*   Bars
+*   Galleries
+*   Museums
+*   Events
+*   Stores
+*   Hidden Gems (Other)
 
 
 This Beta version will be unique to NYC and Brooklyn.  With further development, it will incorporate other APIs so that saved favorites ('Plots') will also show the Yelp review and google information about it, giving the reader a full idea of this place on one page.  In addition, with further development, the categories and subcategories will grow as well as the social sharing components so that Plot can be shared via Facebook, Instagram and more.
