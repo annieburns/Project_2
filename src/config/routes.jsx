@@ -10,6 +10,7 @@ import Register from '../components/register.jsx';
 import Login from '../components/login.jsx';
 import Dashboard from '../components/dashboard.jsx';
 import requireAuth from '../utils/auth.js';
+import Plot from '../components/plot.jsx';
 
 const Routes = () => {
   return (
@@ -20,6 +21,7 @@ const Routes = () => {
         <Route path="login" component={Login} />
         <Route path="dashboard" component={Dashboard} />
         <Route path="dashboard" component={Dashboard} onEnter={requireAuth} />
+        <Route path="plot" component={Plot} />
       </Route>
     </Router>
   );

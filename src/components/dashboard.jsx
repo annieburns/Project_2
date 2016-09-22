@@ -2,14 +2,19 @@
 
 
 import React, { Component } from 'react';
-// import firebase from '../../firebase.config.js';
+import { withRouter } from 'react-router';
+import firebase from '../../firebase.config.js';
+
 
 const Dashboard = () => {
   return (
     <div>
-        <h1>Welcome to the <mark>HOME</mark> component, this component <mark><b>IS</b></mark> protected</h1>
+        <h1>Welcome to the <mark>DASHBOARD</mark> component, this component <mark><b>IS</b></mark> protected</h1>
     </div>
   );
 }
 
 export default Dashboard;
+
+
+
