@@ -11,6 +11,8 @@ import Login from '../components/login.jsx';
 import Dashboard from '../components/dashboard.jsx';
 import requireAuth from '../utils/auth.js';
 import Plot from '../components/plot.jsx';
+import Library from '../components/library.jsx';
+import Community from '../components/community.jsx';
 
 const Routes = () => {
   return (
@@ -22,6 +24,8 @@ const Routes = () => {
         <Route path="dashboard" component={Dashboard} />
         <Route path="dashboard" component={Dashboard} onEnter={requireAuth} />
         <Route path="plot" component={Plot} />
+        <Route path="library" component={Library} />
+        <Route path="community" component={Community} />
       </Route>
     </Router>
   );
