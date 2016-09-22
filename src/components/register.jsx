@@ -45,6 +45,7 @@ class Register extends Component {
     return (
       <div>
         <div id="register-form">
+        <h1>Register with email and password.</h1>
           <div>
             <input name="username" onChange={this.handleChange} type="text" placeholder="username" />
           </div>

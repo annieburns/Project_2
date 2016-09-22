@@ -2,7 +2,7 @@
 //http://localhost:8080/#/login
 
 import React, { Component } from 'react';
-import { withRouter } from 'react-router';
+import { withRouter, Link } from 'react-router';
 import firebase from '../../firebase.config.js';
 
 class Login extends Component {
@@ -39,8 +39,8 @@ class Login extends Component {
   render() {
     return (
       <div>
-      <h1>Welcome to the <mark>LOGIN</mark> component, this component is <mark><b>NOT</b></mark> protected</h1>
         <div id="login-form">
+        <h1> Please Login</h1>
           <div>
             <input name="username" onChange={this.handleChange} type="text" placeholder="username" />
           </div>
