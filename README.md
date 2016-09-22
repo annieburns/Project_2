@@ -16,23 +16,27 @@ So next time when someone asks... "what should I do, where do you recommend?" Yo
 *   Hidden Gems (Other)
 
 
-This Beta version will be unique to NYC and Brooklyn.  With further development, it will incorporate other APIs so that saved favorites ('Plots') will also show the Yelp review and google information about it, giving the reader a full idea of this place on one page.  In addition, with further development, the categories and subcategories will grow as well as the social sharing components so that Plot can be shared via Facebook, Instagram and more.
+This Beta version will be unique to NYC and Brooklyn.  With further development, it will incorporate other APIs so that saved favorites ('Plots') will also show the Yelp review and google information about it, giving the reader a full idea of this place on one page.  In addition, with further development, the categories and subcategories will grow as well as the social sharing components so that Plot can be shared via Facebook, Instagram and more. It will be easy to print, share your PLOT list in an easy-to-read email and so on.
+
+Plot followers will become as valuable as following your favorite artist on instagram.  This will become a community of its own.  The social sharing component allows for curators to emerge and their fans to easily incorporate their plots on their own list.
 
 
 ##Technologies
 * Firebase
 * React
-* APIs (tbd)
 
 ##Next Steps
 * Design the framework, visual flow
 * Setup build environment
-* Research
-* Build HTML/CSS Mock-up** ONLY TO WIREFRAME THE VISUAL LAYOUT 
+* From the design, break down the components and hierarchy
 * Create Firebase database
 * Build the React CRUD App
 
-
+* Build HTML/CSS Mock-up** ONLY TO WIREFRAME THE VISUAL LAYOUT 
 
 ##Bonuses
 * Implement a portion (test) of API to work within app
+
+###Sources
+**  General Assembly WDI -'auth_starter' exercise, Will Shaw
+**  http://allfont.net/download/sans-serif-shaded/
