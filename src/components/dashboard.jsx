@@ -8,8 +8,8 @@ import firebase from '../../firebase.config.js';
 
 const Dashboard = () => {
   return (
-    <div>
-        <h1>Welcome to the <mark>DASHBOARD</mark> component, this component <mark><b>IS</b></mark> protected</h1>
+    <div id="dash-content">
+        <h1>Home Dashboard</h1>
     </div>
   );
 }
