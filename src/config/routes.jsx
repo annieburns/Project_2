@@ -23,7 +23,7 @@ const Routes = () => {
         <Route path="login" component={Login} />
         <Route path="dashboard" component={Dashboard} />
         <Route path="dashboard" component={Dashboard} onEnter={requireAuth}/>
-        <Route path="plot" component={Plot} onEnter={requireAuth} />
+        <Route path="plot" component={Plot} />
         <Route path="library" component={Library} />
         <Route path="community" component={Community} />
       </Route>
@@ -32,3 +32,21 @@ const Routes = () => {
 }
 
 export default Routes;
+
+//CORRECT BUT MAKES YOU LOGIN / REGISTER EVERY TIME
+// const Routes = () => {
+//   return (
+//     <Router history={hashHistory}>
+//       <Route path="/" component={Main}>
+//         <IndexRoute component={About}/>
+//         <Route path="register" component={Register} />
+//         <Route path="login" component={Login} />
+//         <Route path="dashboard" component={Dashboard} />
+//         <Route path="dashboard" component={Dashboard} onEnter={requireAuth}/>
+//         <Route path="plot" component={Plot} onEnter={requireAuth} />
+//         <Route path="library" component={Library} />
+//         <Route path="community" component={Community} />
+//       </Route>
+//     </Router>
+//   );
+// }

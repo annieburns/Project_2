@@ -32,8 +32,10 @@ handlePlotSubmit(database) {
       comments: this.state.comments,
     })
 
-    this.setState({plot: "", comments: ""});
+  this.setState({ saved: true });
+    // this.setState({plot: "", comments: ""});
   }
+
   render() {
     return (
       <div>
@@ -47,6 +49,11 @@ handlePlotSubmit(database) {
           </div>
           <button className="btn" onClick={this.handlePlotSubmit}>Add PLOT</button>
         </div>
+        <div id="bottom-nav">
+          <Link to="/plot" id="plot">ADD A PLOT</Link>
+          <Link to="/library" id="library">YOUR LIBRARY</Link>
+          <Link to="/community" id="community">PLOT COMMUNITY</Link>
+      </div>
       </div>
     );
   }
@@ -63,125 +70,3 @@ export default Plot;
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-// DOESNT WORK
-// const propTypes = {
-//   id: React.PropTypes.string,
-//   plot: React.PropTypes.string,
-//   comments: React.PropTypes.string,
-//   handlePublish: React.PropTypes.func,
-// };
-
-// class Plot extends React.Component {
-//   constructor(props) {
-//     super(props);
-//     this.state = {
-//     };
-
-//     this.handleSubmit = this.handleSubmit.bind(this);
-//     this.isSaved = this.isSaved.bind(this);
-//     this.handlePublish = this.handlePublish.bind(this);
-//   }
-
-//  httpUpdatePlot({ id, plot, comments }) {
-//     request.patch(url)
-//            .send({ plot, comments })
-//            .then(() => {
-//              this.httpGetPlots();
-//            });
-//   }
-//   httpPublishPlot({ id, plot, comments }) {
-//     request.plot(url)
-//            .send({ plot, comments })
-//            .then(() => {
-//              this.httpGetPlots();
-//            });
-//   }
-
-//    handlePublish({ id, plot, comments }) {
-//     if (id) {
-//       this.httpUpdatePlot({ id, plot, comments });
-//     } else {
-//       this.httpPublishPlot({ id, plot, comments });
-//     }
-//   }
-
-//   handleSubmit(e) {
-//     e.preventDefault();
-//     this.props.handlePublish({
-//       id: this.props.id,
-//       comments: this.state.comments,
-//       plot: this.state.plot,
-//     });
-//     this.setState({ saved: true });
-//   }
-
-//   isSaved() {
-//     return this.props.comments === this.state.comments &&
-//           this.props.plot === this.state.plot;
-//   }
-//  render() {
-//     let activeButtons;
-//     if (this.isSaved()) {
-//       activeButtons = (
-//         <div className="active-buttons"></div>
-//       );
-//     }
-//     return (
-//       <div className={this.isSaved() ? 'saved' : 'not-saved'} >
-//         <form className="plot-display" onSubmit={this.handleSubmit}>
-//           <input
-//             type="text"
-//             comments="comments"
-//             value={this.state.comments}
-//             onChange={this.handleEditOfcomments}
-//           />
-//           <input
-//             type="text"
-//             comments="plot"
-//             value={this.state.plot}
-//             onChange={this.handleEditOfplot}
-//           />
-//           <input
-//             type="submit"
-//             value="SAVE"
-//             className="hidden"
-//           />
-//         </form>
-//         {activeButtons}
-//       </div>
-//     );
-//   }
-// }
-
-// Plot.propTypes = propTypes;
-
-// export default Plot;
-
-
-/////////////
-// FIRST BASIC SETUP
-
-// const Plot = () => {
-//   return (
-//     <div>
-//       <h1>Welcome to the <mark>PLOT</mark> component, this component <mark><b>IS</b></mark> protected</h1>
-//     </div>
-//     );
-//   }
-
-// export default Plot;
-
-/////////
