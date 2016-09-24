@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { withRouter } from 'react-router';
+import { withRouter, Link, hashHistory } from 'react-router';
 import firebase from '../../firebase.config.js';
 import request from 'superagent';
 import Plot from './plot.jsx';
@@ -9,13 +9,15 @@ class Library extends React.Component {
   constructor(props) {
     super(props);
     this.state = {}
+    this.getPlots = this.getPlots.bind(this);
   };
   componentDidMount() {
     this.getPlots()
+
   }
 
  getPlots() {
-    const userId = firebase.auth().currentUser;
+    const userId = firebase.auth().currentUser.uid;
     const url = `https://plot-63737.firebaseio.com/users/${userId}/plot.json`;
     request.get(url)
       .end((err, response) => {
@@ -25,11 +27,36 @@ class Library extends React.Component {
       })
   }
 
+
+
    render() {
+    <div id="bottom-nav">
+        <Link to="/plot" id="plot">ADD A PLOT</Link>
+    </div>
+
+    if ( !this.state.plot ) {
+      return (
+        <div id="plot-library">
+        <h2>This is your plot library! Nothing here </h2>
+        </div>
+      )
+    }
+    const keys = Object.keys(this.state.plot);
+    const plotElements = keys.map((key) => {
+      return (
+        <div key={key}>
+          <h2>{this.state.plot[key].plot}</h2>
+          <h3>{this.state.plot[key].comments}</h3>
+        </div>
+        )
+    });
     return (
       <div id="plot-library">
-        <h2> {this.props.state} </h2>
+        {plotElements}
+      <div id="bottom-nav">
+        <Link to="/plot" id="plot">ADD A PLOT</Link>
       </div>
+    </div>
     );
   }
 }
