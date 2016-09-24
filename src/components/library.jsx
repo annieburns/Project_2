@@ -38,6 +38,9 @@ class Library extends React.Component {
       return (
         <div id="plot-library">
         <h2>This is your plot library! Nothing here </h2>
+          <div id="bottom-nav">
+            <Link to="/plot" id="plot">ADD A PLOT</Link>
+          </div>
         </div>
       )
     }
@@ -53,13 +56,12 @@ class Library extends React.Component {
     return (
       <div id="plot-library">
         {plotElements}
-      <div id="bottom-nav">
-        <Link to="/plot" id="plot">ADD A PLOT</Link>
-      </div>
+          <div id="bottom-nav">
+            <Link to="/plot" id="plot">ADD A PLOT</Link>
+          </div>
     </div>
     );
   }
 }
 
 export default Library;
-
