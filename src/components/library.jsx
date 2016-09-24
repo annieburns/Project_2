@@ -36,25 +36,29 @@ class Library extends React.Component {
 
     if ( !this.state.plot ) {
       return (
-        <div id="plot-library">
-        <h2>This is your plot library! Nothing here </h2>
+         <div id="plot-library">
+        <h2>This is your plot library!</h2>
           <div id="bottom-nav">
             <Link to="/plot" id="plot">ADD A PLOT</Link>
           </div>
         </div>
       )
     }
+
     const keys = Object.keys(this.state.plot);
     const plotElements = keys.map((key) => {
       return (
-        <div key={key}>
-          <h2>{this.state.plot[key].plot}</h2>
-          <h3>{this.state.plot[key].comments}</h3>
+        <div id="plot-block">
+          <div key={key}>
+            <h2>{this.state.plot[key].plot}</h2>
+            <h3>{this.state.plot[key].comments}</h3>
+          </div>
         </div>
         )
     });
+
     return (
-      <div id="plot-library">
+      <div id="plot-elements">
         {plotElements}
           <div id="bottom-nav">
             <Link to="/plot" id="plot">ADD A PLOT</Link>

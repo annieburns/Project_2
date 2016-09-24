@@ -7,8 +7,13 @@
   color: black;
 }
 
+div#plot-elements{
+  border: 5px solid red;
+}
 
-
+#plot-block{
+  border: 5px solid black;
+}
 #bottom-nav {
   background-color: black;
   color: white;
