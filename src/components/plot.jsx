@@ -5,11 +5,11 @@ import firebase from '../../firebase.config.js';
 
 
 class Plot extends Component {
-  constructor() {
+  constructor(props) {
     super();
     this.state = {
-      plot: '',
-      comments: '',
+      plot: props.plot || '',
+      comments: props.comments || '',
     };
     this.handleNewPlot = this.handleNewPlot.bind(this);
     this.handlePlotSubmit = this.handlePlotSubmit.bind(this);
@@ -27,13 +27,13 @@ handlePlotSubmit(database) {
     const { plot, comments } = this.state;
     // console.log(firebase.auth());
     const userId = firebase.auth().currentUser.uid;
-    firebase.database().ref('users/' + userId).push({
+    firebase.database().ref('users/' + userId + '/plot/').push({
       plot: this.state.plot,
       comments: this.state.comments,
     })
 
   this.setState({ saved: true });
-    // this.setState({plot: "", comments: ""});
+  this.setState({plot: "", comments: ""});
   }
 
   render() {
@@ -42,17 +42,29 @@ handlePlotSubmit(database) {
         <div id="plot-form">
         <h1>Add a PLOT.</h1>
           <div>
-            <input name="plot" onChange={this.handleNewPlot} type="text" placeholder="plot" />
+            <input
+            name="plot"
+            onChange={this.handleNewPlot}
+            value={this.state.plot}
+            type="text"
+            placeholder="plot" />
           </div>
           <div>
-            <input name="comments" onChange={this.handleNewPlot} type="comments" placeholder="comments" />
+            <input
+            name="comments"
+            onChange={this.handleNewPlot}
+            value={this.state.comments}
+            type="comments"
+            placeholder="comments" />
           </div>
-          <button className="btn" onClick={this.handlePlotSubmit}>Add PLOT</button>
+          <button
+          className="btn"
+          onClick={this.handlePlotSubmit}>Add PLOT
+          </button>
         </div>
         <div id="bottom-nav">
           <Link to="/plot" id="plot">ADD A PLOT</Link>
           <Link to="/library" id="library">YOUR LIBRARY</Link>
-          <Link to="/community" id="community">PLOT COMMUNITY</Link>
       </div>
       </div>
     );

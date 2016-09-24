@@ -5,7 +5,6 @@ import request from 'superagent';
 import Plot from './plot.jsx';
 
 
-
 class Library extends React.Component {
   constructor(props) {
     super(props);
@@ -16,8 +15,8 @@ class Library extends React.Component {
   }
 
  getPlots() {
-    const userId = firebase.auth().currentUser.uid;
-    const url = `https://plot-63737.firebaseio.com/users/${userID}/plot.json`;
+    const userId = firebase.auth().currentUser;
+    const url = `https://plot-63737.firebaseio.com/users/${userId}/plot.json`;
     request.get(url)
       .end((err, response) => {
         this.setState({
@@ -29,31 +28,11 @@ class Library extends React.Component {
    render() {
     return (
       <div id="plot-library">
-        <h2> jhfiyf</h2>
+        <h2> {this.props.state} </h2>
       </div>
     );
+  }
 }
-}
-
 
 export default Library;
-
-
-
-
-
-
-// return (
-//     <div>
-//       <h1>Welcome to the <mark>Library</mark> component, this component <mark><b>IS</b></mark> protected</h1>
-//       <h2>
-//     </div>
-//     );
-//   }
-
-// export default Library;
-
-// get request with string interpolation
-// userid same as done in plot.jsx
-// This is getting all of the values in the contact object for the user with id: currenUserID
 
