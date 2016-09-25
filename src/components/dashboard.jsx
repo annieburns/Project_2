@@ -12,9 +12,9 @@ import firebase from '../../firebase.config.js';
 
 const Dashboard = () => {
   return (
-    <div>
+    <div id="dashboard">
       <div id="content-bar">Home Dashboard</div>
-    <div>
+    <div id="bottom-nav">
       <Link to="/plot" id="plot">ADD A PLOT</Link>
       <Link to="/library" id="library">YOUR LIBRARY</Link>
       </div>

@@ -37,7 +37,7 @@ class Library extends React.Component {
     if ( !this.state.plot ) {
       return (
          <div id="plot-library">
-        <h2>This is your plot library!</h2>
+        <div id="content-bar">PLOT LIBRARY</div>
           <div id="bottom-nav">
             <Link to="/plot" id="plot">ADD A PLOT</Link>
           </div>

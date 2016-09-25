@@ -40,7 +40,7 @@ handlePlotSubmit(database) {
     return (
       <div>
         <div id="plot-form">
-        <h1>Add a PLOT.</h1>
+        <div id="content-bar">ADD A PLOT</div>
           <div>
             <input
             name="plot"
@@ -63,7 +63,6 @@ handlePlotSubmit(database) {
           </button>
         </div>
         <div id="bottom-nav">
-          <Link to="/plot" id="plot">ADD A PLOT</Link>
           <Link to="/library" id="library">YOUR LIBRARY</Link>
       </div>
       </div>

@@ -104,6 +104,10 @@ div#plot-elements{
   vertical-align: middle;
   z-index: 1;
   padding-top: 1%;
+  text-align: center;
+  vertical-align: middle;
+  margin-bottom: 0rem;
+  padding: 1%;
 }
 
 
@@ -116,6 +120,11 @@ div#plot-elements{
  color: black;
  background-color: grey;
  font-size: .9em;
+ text-align: center;
+  vertical-align: middle;
+  margin-bottom: 0rem;
+  padding: 1%;
+   width: 100%;
  }
 
 #about-para1 {
