@@ -36,11 +36,17 @@
 }
 
 div#plot-elements{
-  border: 5px solid red;
+  padding-top: 5%;
+  margin-top: 2%;
 }
 
 #plot-block{
   border: 5px solid black;
+  background-color: #800000;
+  color: white;
+  padding: 1%;
+  margin: 1%;
+  font-family: 'Roboto Condensed', sans-serif;
 }
 
 

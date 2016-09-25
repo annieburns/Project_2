@@ -12,13 +12,16 @@
 import React, { Component } from 'react';
 import firebase from '../../firebase.config.js';
 
-function requireAuth(nextState, replace) {
-  if(firebase.auth().currentUser === null) {
-    replace({
-      pathname: '/login',
-      state: { nextPathname: nextState.location.pathname },
-    });
-  }
+function requireAuth(nextState, replace, callback) {
+  firebase.auth().onAuthStateChanged((user) => {
+    if (user === null) {
+      replace({
+        pathname: '/about',
+        state: { nextPathname: nextState.location.pathname },
+      });
+    }
+    callback();
+  });
 }
 
-module.exports = requireAuth;
+module.exports = requireAuth

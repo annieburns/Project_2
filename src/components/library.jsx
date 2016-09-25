@@ -29,30 +29,31 @@ class Library extends React.Component {
 
 
 
-   render() {
-    <div id="bottom-nav">
-        <Link to="/plot" id="plot">ADD A PLOT</Link>
-    </div>
-
+render() {
     if ( !this.state.plot ) {
       return (
+        <div>
+         <div id="content-bar">PLOT LIBRARY></div>
          <div id="plot-library">
-        <div id="content-bar">PLOT LIBRARY</div>
-          <div id="bottom-nav">
+         <div id="bottom-nav">
             <Link to="/plot" id="plot">ADD A PLOT</Link>
           </div>
-        </div>
+      </div>
+    </div>
       )
     }
 
     const keys = Object.keys(this.state.plot);
     const plotElements = keys.map((key) => {
       return (
+        <div>
+         <div id="content-bar">PLOT LIBRARY</div>
         <div id="plot-block">
           <div key={key}>
             <h2>{this.state.plot[key].plot}</h2>
             <h3>{this.state.plot[key].comments}</h3>
           </div>
+        </div>
         </div>
         )
     });
