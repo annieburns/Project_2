@@ -2,14 +2,12 @@ import React, { Component } from 'react';
 import { withRouter, Link, hashHistory } from 'react-router';
 import firebase from '../../firebase.config.js';
 
-
-
-
 class Plot extends Component {
   constructor(props) {
     super();
     this.state = {
       plot: props.plot || '',
+      category: props.category || '',
       comments: props.comments || '',
     };
     this.handleNewPlot = this.handleNewPlot.bind(this);
@@ -25,16 +23,17 @@ handleNewPlot(e) {
 
 handlePlotSubmit(database) {
     console.log(this.state);
-    const { plot, comments } = this.state;
+    const { plot, category, comments } = this.state;
     // console.log(firebase.auth());
     const userId = firebase.auth().currentUser.uid;
     firebase.database().ref('users/' + userId + '/plot/').push({
       plot: this.state.plot,
+      category: this.state.category,
       comments: this.state.comments,
     })
 
   this.setState({ saved: true });
-  this.setState({plot: "", comments: ""});
+  this.setState({plot: "", category: "", comments: ""});
   }
 
   render() {
@@ -44,11 +43,19 @@ handlePlotSubmit(database) {
         <div id="content-bar">ADD A PLOT</div>
           <div>
             <input
-            name="plot"
-            onChange={this.handleNewPlot}
-            value={this.state.plot}
-            type="text"
-            placeholder="plot" />
+              name="plot"
+              onChange={this.handleNewPlot}
+              value={this.state.plot}
+              type="text"
+              placeholder="plot name and address" />
+          </div>
+          <div>
+            <input
+              name="category"
+              onChange={this.handleNewPlot}
+              value={this.state.category}
+              type="category"
+              placeholder="category" />
           </div>
           <div>
             <input
@@ -60,20 +67,19 @@ handlePlotSubmit(database) {
           </div>
           <button
           className="btn"
-          onClick={this.handlePlotSubmit}>Add PLOT
+          onClick={this.handlePlotSubmit}>Add PLOT to Your Library
           </button>
         </div>
         <div id="bottom-nav">
           <Link to="/library" id="library">YOUR LIBRARY</Link>
           <Link to="/about" id="about">ABOUT PLOT</Link>
           <Link to="/dashboard" id="dashboard">YOUR DASHBOARD</Link>
+          <Link to="/community" id="community">PLOT COMMUNITY</Link>
       </div>
       </div>
     );
   }
 }
-
-
 
 export default Plot;
 

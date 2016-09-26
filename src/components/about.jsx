@@ -1,13 +1,14 @@
 // This will render our home component, this will be a dummy component that will just render some text.
 import React from 'react';
 // We are not using a COMPONENT IN ABOVE because its a dummy component
+import { withRouter, Link, hashHistory } from 'react-router';
+import firebase from '../../firebase.config.js';
 
 
 const About = () => {
   return (
-
-
     <div>
+
       <div id="content-bar">About</div>
       <div id="about-intro">
         <h1>Where do you recommend I go?</h1>
@@ -27,6 +28,9 @@ const About = () => {
           <li>Stores</li>
           <li>Hidden Gems</li>
         </ul>
+        <div id="bottom-nav">
+          <Link to="/community" id="community2">CHECK OUT THE PLOT COMMUNITY</Link>
+      </div>
     </div>
   );
 }

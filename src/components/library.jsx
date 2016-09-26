@@ -68,25 +68,14 @@ render() {
           <PlotItem
             key={key}
             plot={this.state.plot[key].plot}
+            category={this.state.plot[key].category}
             comments={this.state.plot[key].comments}
             id={key}
             onClick={this.handleDeleteClick}
           />
         )
     });
-    {/*
-        <div key={key} id="plot-block">
-          <div>
-            <h2>{this.state.plot[key].plot}</h2>
-            <h3>{this.state.plot[key].comments}</h3>
-            <button
-              value={key}
-              onClick={this.handleDeleteClick}
-              >Delete
-            </button>
-          </div>
-        </div>
-      */}
+
     return (
       <div>
         <div id="content-bar">PLOT LIBRARY </div>
@@ -95,6 +84,7 @@ render() {
         </div>
         <div id="bottom-nav">
           <Link to="/plot" id="plot">ADD A PLOT</Link>
+          <Link to="/community" id="community">PLOT COMMUNITY</Link>
         </div>
       </div>
     );
@@ -103,20 +93,3 @@ render() {
 
 export default Library;
 
-
-
-
-//deleted "plot library id" becuase thought it might be useless, here it is just in case
-// render() {
-//     if ( !this.state.plot ) {
-//       return (
-//         <div>
-//          <div id="content-bar">PLOT LIBRARY </div>
-//          <div id="plot-library">
-//          <div id="bottom-nav">
-//             <Link to="/plot" id="plot">ADD A PLOT</Link>
-//           </div>
-//       </div>
-//     </div>
-//    );
-//   }
