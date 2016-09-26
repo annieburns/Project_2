@@ -247,17 +247,18 @@ ul {
   padding: 1%;
 }
 
-#login {
+/*#login {
   font-family: 'Norwester', arial;
   color: white;
   position: absolute;
-  top: 0rem;
   right: 1rem;
   width: auto;
   float: left;
   border: 1px solid white;
   margin: 1%;
   padding: 1%;
+  top: 1rem;
+  right: 5.7rem;
 }
 
 #register {
@@ -271,6 +272,28 @@ ul {
   border: 1px solid white;
   margin: 1%;
   padding: 1%;
+}*/
+
+
+a#login {
+  position: absolute;
+  top: 0;
+  right: .5rem;
+  font-family: 'Norwester', arial;
+  border: 1px solid white;
+  float: left;
+  padding: .2em;
+  margin:.5em;
+}
+
+a#register {
+  position: absolute;
+  top: 0;
+  right: 3.3em;
+  font-family: 'Norwester', arial;
+  border: 1px solid white;
+  padding: .2em;
+  margin:.5em;
 }
 
 

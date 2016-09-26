@@ -50,10 +50,10 @@ loggedInLinks() {
     return (
       <div>
         <div id="login">
-          <Link to="/login" id="login">Login </Link>
+          <Link to="/login" id="login">Login</Link>
         </div>
         <div id="register">
-          <Link to="/register" id="register">Register </Link>
+          <Link to="/register" id="register">Register</Link>
        </div>
       </div>
     );
