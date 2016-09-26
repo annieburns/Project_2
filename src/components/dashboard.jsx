@@ -17,6 +17,7 @@ const Dashboard = () => {
     <div id="bottom-nav">
       <Link to="/plot" id="plot">ADD A PLOT</Link>
       <Link to="/library" id="library">YOUR LIBRARY</Link>
+      <Link to="/about" id="about">ABOUT PLOT</Link>
       </div>
     </div>
   );

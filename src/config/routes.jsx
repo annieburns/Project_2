@@ -24,6 +24,7 @@ const Routes = () => {
         <Route path="dashboard" component={Dashboard} onEnter={requireAuth}/>
         <Route path="plot" component={Plot} onEnter={requireAuth} />
         <Route path="library" component={Library} onEnter={requireAuth} />
+        <Route path="about" component={About} />
       </Route>
     </Router>
   );

@@ -4,6 +4,7 @@ import firebase from '../../firebase.config.js';
 
 
 
+
 class Plot extends Component {
   constructor(props) {
     super();
@@ -64,6 +65,8 @@ handlePlotSubmit(database) {
         </div>
         <div id="bottom-nav">
           <Link to="/library" id="library">YOUR LIBRARY</Link>
+          <Link to="/about" id="about">ABOUT PLOT</Link>
+          <Link to="/dashboard" id="dashboard">YOUR DASHBOARD</Link>
       </div>
       </div>
     );
