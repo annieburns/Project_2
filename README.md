@@ -1,4 +1,12 @@
-# Project_2
+# PLOT
+## Project_2
+
+## Author
+* **Annie Burns** * Initial Version - Version 1.0, 9/26/2016
+
+## Built With
+* sublime
+* HTML, CSS, Javascript, React, React Router, Firebase
 
 ##Project MVP (Minimum Viable Product):
 There seems to be a social network for everything these days, whether its sharing your favorite movies, photos or songs.  There also seems to be apps such as Yelp or Google (Places) that allow people to search restaurants, museums, galleries -- you name it.  
@@ -21,22 +29,15 @@ This Beta version will be unique to NYC and Brooklyn.  With further development,
 Plot followers will become as valuable as following your favorite artist on instagram.  This will become a community of its own.  The social sharing component allows for curators to emerge and their fans to easily incorporate their plots on their own list.
 
 
-##Technologies
-* Firebase
-* React
 
 ##Next Steps
-* Design the framework, visual flow
-* Setup build environment
-* From the design, break down the components and hierarchy
-* Create Firebase database
-* Build the React CRUD App
-
-* Build HTML/CSS Mock-up** ONLY TO WIREFRAME THE VISUAL LAYOUT 
-
-##Bonuses
-* Implement a portion (test) of API to work within app
+* COMMUNITY AND SHARING COMPONENTS
+* EXPORT / PRINT EVENTS
+* YELP, ZAGAT AND GOOGLE APIS
 
 ###Sources
 **  General Assembly WDI -'auth_starter' exercise, Will Shaw
 **  http://allfont.net/download/sans-serif-shaded/
+* * RESIZE IMAGES: http://resizeimage.net/
+* * IMAGE URL HANDLERS: http://imgur.com
+* * COLOR HEX: http://www.color-hex.com/color/f20808

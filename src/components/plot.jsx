@@ -73,8 +73,8 @@ handlePlotSubmit(database) {
         <div id="bottom-nav">
           <Link to="/library" id="library">YOUR LIBRARY</Link>
           <Link to="/about" id="about">ABOUT PLOT</Link>
+          <Link to="/community" id="community">PLOT COMMUNITY *Coming Soon!</Link>
           <Link to="/dashboard" id="dashboard">YOUR DASHBOARD</Link>
-          <Link to="/community" id="community">PLOT COMMUNITY</Link>
       </div>
       </div>
     );
@@ -85,8 +85,8 @@ export default Plot;
 
 
 
-
-
+// DID NOT GET TO FINISH COMMUNITY
+ // <Link to="/community" id="community">PLOT COMMUNITY</Link>
 
 
 

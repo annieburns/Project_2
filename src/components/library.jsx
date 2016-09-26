@@ -84,7 +84,8 @@ render() {
         </div>
         <div id="bottom-nav">
           <Link to="/plot" id="plot">ADD A PLOT</Link>
-          <Link to="/community" id="community">PLOT COMMUNITY</Link>
+          <Link to="/dashboard" id="dashboard2">YOUR DASHBOARD</Link>
+          <Link to="/community" id="community">PLOT COMMUNITY *Coming Soon!</Link>
         </div>
       </div>
     );
@@ -93,3 +94,5 @@ render() {
 
 export default Library;
 
+//DID NOT GET TO FINISH COMMUNITY
+//<Link to="/community" id="community">PLOT COMMUNITY</Link>

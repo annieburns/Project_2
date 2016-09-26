@@ -15,10 +15,10 @@ const Dashboard = () => {
     <div id="dashboard">
       <div id="content-bar">Home Dashboard</div>
     <div id="bottom-nav">
-      <Link to="/plot" id="plot2">ADD A PLOT</Link>
-      <Link to="/library" id="library2">YOUR LIBRARY</Link>
-      <Link to="/about" id="about2">ABOUT PLOT</Link>
-      <Link to="/community" id="community3">PLOT COMMUNITY</Link>
+      <Link to="/plot" id="plot4">ADD A PLOT</Link>
+      <Link to="/library" id="library4">YOUR LIBRARY</Link>
+      <Link to="/about" id="about4">ABOUT PLOT</Link>
+      <Link to="/community" id="community4">PLOT COMMUNITY *Coming Soon!</Link>
       </div>
     </div>
   );
@@ -28,3 +28,5 @@ export default Dashboard;
 
 
 
+//DID NOT GET TO FINISH COMMUNITY
+ // <Link to="/community" id="community3">PLOT COMMUNITY</Link>
